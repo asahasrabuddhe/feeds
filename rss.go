@@ -99,6 +99,7 @@ func newRssItem(i *Item) *RssItem {
 		Description: i.Description,
 		Guid:        i.Id,
 		PubDate:     anyTimeFormat(time.RFC1123Z, i.Created, i.Updated),
+		Category:    i.Category,
 	}
 	if len(i.Content) > 0 {
 		item.Content = &RssContent{Content: i.Content}
