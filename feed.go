@@ -36,6 +36,7 @@ type Item struct {
 	Created     time.Time
 	Enclosure   *Enclosure
 	Content     string
+	Category    string //category is a string not a array according to rss2.0 spec http://www.rssboard.org/rss-specification#ltcategorygtSubelementOfLtitemgt
 }
 
 type Feed struct {
